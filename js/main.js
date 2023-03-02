@@ -54,7 +54,7 @@ function addTask(e) {
     deleteBtn.textContent = "Delete";
     buttonsDiv.appendChild(deleteBtn);
 
-    // deleteBtn.addEventListener("click", deleteTask);
+    deleteBtn.addEventListener("click", deleteTask);
 
     saveToLocalStorage(todoInput.value);
   }
@@ -116,6 +116,22 @@ function getElementOnLoaded() {
     deleteBtn.textContent = "Delete";
     buttonsDiv.appendChild(deleteBtn);
 
-    // deleteBtn.addEventListener("click", deleteTask);
+    deleteBtn.addEventListener("click", deleteTask);
   });
+}
+
+function deleteTask(e) {
+  if(e.target.classList.contains("delete")) {
+    let item = e.target.parentElement.parentElement;
+    item.remove();
+    deleteToLocalStorage(item);
+  }
+}
+
+function deleteToLocalStorage(element) {
+  let item = element.children[0].children[0];
+  todoArray = JSON.parse(localStorage.getItem("Items"));
+  let index = todoArray.indexOf(item.value);
+  todoArray.splice(index, 1);
+  localStorage.setItem("Items", JSON.stringify(todoArray));
 }
