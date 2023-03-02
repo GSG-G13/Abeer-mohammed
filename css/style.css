@@ -136,3 +136,51 @@ h2 {
   border-radius: 5px;
   cursor: pointer;
 }
+
+/* Responsive */
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .toggle-btn {
+    top: -7%;
+    right: 3%;
+  }
+
+  form {
+    margin: 0 15%;
+  }
+
+  .content {
+    margin: 6% 15%;
+  }
+
+  .text {
+    width: 180px;
+  }
+
+  .buttons {
+    width: 145px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .toggle-btn {
+    top: -8%;
+    right: 3%;
+  }
+
+  form {
+    margin: 0 25%;
+  }
+
+  .content {
+    margin: 6% 25%;
+  }
+
+  .text {
+    width: 200px;
+  }
+
+  .buttons {
+    width: 180px;
+    justify-content: space-around;
+  }
+}
