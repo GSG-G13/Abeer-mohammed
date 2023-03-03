@@ -194,7 +194,7 @@ function setDarkTheme() {
   toggleBtn.alt = 'light';
   bodyElement.style.backgroundColor = 'hsl(235, 21%, 11%)';
   listTask.style.backgroundColor = 'hsl(235, 24%, 19%)';
-  headerBg.style.backgroundImage = 'url("../img/bg-mobile-dark.jpg")';
+  headerBg.style.backgroundImage = 'url("./img/bg-mobile-dark.jpg")';
   titleTask.style.color = '#fff';
 
 } else {
@@ -206,7 +206,7 @@ function setDarkTheme() {
   toggleBtn.alt = 'moon';
   bodyElement.style.backgroundColor = '#fff';
   listTask.style.backgroundColor = '#fff';
-  headerBg.style.backgroundImage = 'url("../img/todoBg.jpg")';
+  headerBg.style.backgroundImage = 'url("./img/todoBg.jpg")';
   titleTask.style.color = '#333';
 }
 }
