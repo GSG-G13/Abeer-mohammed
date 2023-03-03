@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 18px;
+  transition: 0.5s ease-in-out;
 }
 
 :root {
@@ -13,6 +14,7 @@
   --body-color: white;
   --text-color: #27292d;
   --button-color: #ddd;
+  ;
   --border-color: #535252;
 }
 
@@ -21,7 +23,7 @@ html {
 }
 
 header {
-  background-image: url('../img/todoBg.jpg');
+  background-image: url("../img/todoBg.jpg");
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -31,6 +33,9 @@ header {
 
 header .title {
   padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 header .title h1 {
@@ -64,6 +69,7 @@ label {
 }
 
 .add {
+
   width: 25px;
   height: 25px;
   border: 1px solid #ddd;
@@ -81,6 +87,7 @@ label {
 h2 {
   border-bottom: 2px solid var(--border-color);
 }
+
 
 .list {
   list-style-type: none;
@@ -102,6 +109,7 @@ h2 {
 
 .item:not(:last-child) {
   border-bottom: 1px solid hsl(240, 3%, 81%);
+
 }
 
 .text {

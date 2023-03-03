@@ -1,10 +1,18 @@
 let todoInput = document.querySelector(".todo-input");
-let addBtn = document.querySelector(".add");
-let todoList = document.querySelector(".list");
+const form = document.querySelector("form")
+const addBtn = document.querySelector(".add i");
+const todoList = document.querySelector(".list");
+const toggleBtn = document.querySelector(".toggle-btn");
+const bodyElement = document.querySelector('body');
+const listTask = document.querySelector(".list-task .list");
+const headerBg = document.querySelector('header');
+const titleTask = document.querySelector('.content h2');
 let todoArray = [];
 
 addBtn.addEventListener("click", addTask);
 document.addEventListener("DOMContentLoaded", getElementOnLoaded);
+toggleBtn.addEventListener("click",swithTheme);
+
 
 function addTask(e) {
   e.preventDefault();
@@ -171,4 +179,56 @@ function deleteToLocalStorage(element) {
   let index = todoArray.indexOf(item.value);
   todoArray.splice(index, 1);
   localStorage.setItem("Items", JSON.stringify(todoArray));
+}
+
+
+
+function setDarkTheme() {
+ 
+ if (toggleBtn.getAttribute('alt') === 'moon') {
+  toggleBtn.classList.remove('moon');
+  form.style.backgroundColor = 'hsl(235, 24%, 19%)';
+  todoInput.style.backgroundColor = 'hsl(235, 24%, 19%)';
+  addBtn.style.color = '#fff';
+  toggleBtn.src = '../img/icon-sun.svg';
+  toggleBtn.alt = 'light';
+  bodyElement.style.backgroundColor = 'hsl(235, 21%, 11%)';
+  listTask.style.backgroundColor = 'hsl(235, 24%, 19%)';
+  headerBg.style.backgroundImage = 'url("../img/bg-mobile-dark.jpg")';
+  titleTask.style.color = '#fff';
+
+} else {
+  toggleBtn.classList.remove('light');
+  form.style.backgroundColor = '#fff';
+  todoInput.style.backgroundColor = '#fff';
+  addBtn.style.color = 'hsl(235, 24%, 19%)';
+  toggleBtn.src = '../img/icon-moon.svg';
+  toggleBtn.alt = 'moon';
+  bodyElement.style.backgroundColor = '#fff';
+  listTask.style.backgroundColor = '#fff';
+  headerBg.style.backgroundImage = 'url("../img/todoBg.jpg")';
+  titleTask.style.color = '#333';
+}
+}
+
+// Dark Mode
+
+function swithTheme() {
+  let darkMode = localStorage.getItem('dark');
+
+  if (darkMode !== 'on') {
+    setDarkTheme();
+    darkMode = localStorage.setItem('dark', 'on');
+  } else {
+    setDarkTheme();
+    darkMode = localStorage.setItem('dark', 'off');
+  }
+}
+
+// Get the value of the "dark" item from the local storage
+let darkMode = localStorage.getItem('dark');
+
+// check dark mode is on or off on page reload
+if (darkMode === 'on') {
+  setDarkTheme();
 }
