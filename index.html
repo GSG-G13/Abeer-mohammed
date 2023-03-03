@@ -1,59 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TODO APP</title>
-    <!-- CSS Style -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-    />
-  </head>
 
-  <body>
-    <header>
-      <div class="title">
-        <h1>todo list</h1>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TODO APP</title>
+  <!-- CSS Style -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+</head>
 
-    <form>
-      <label for="new-todo">New ToDo</label>
-      <input
-        type="text"
-        id="new-todo"
-        class="todo-input"
-        autocomplete="off"
-        required
-      />
-      <button type="submit" class="add">Add ToDo</button>
-    </form>
-    <div class="content">
-      <h2>ToDo List</h2>
-      <ul class="list">
-        <!-- <li class="item">
-          <div class="text">
-            <input
-              type="text"
-              class="item-text"
-              value="Write a blog post"
-              readonly
-            />
-            <input type="text" class="item-text" hidden />
-          </div>
-          <div class="buttons">
-            <button class="save" hidden>Save</button>
-            <button class="edit">Edit</button>
-            <button class="delete">Delete</button>
-          </div>
-        </li> -->
-      </ul>
+<body>
+  <header>
+    <div class="title">
+      <h1>todo</h1>
     </div>
+    <div class="tasks">
+      <form>
+        <div class="add">
+          <i class="fa-solid fa-plus"></i>
+        </div>
+        <input type="text" name="task" class="todo-input" id="new-todo" placeholder="Create a new todo..." />
+      </form>
+    </div>
+  </header>
 
-    <!-- Script Link -->
-    <script src="js/main.js"></script>
-  </body>
+  <div class="content">
+    <h2>ToDo List</h2>
+    <div class="list-task">
+      <ul class="list"></ul>
+    </div>
+  </div>
+  <div class="reorder-list">Drag and drop to reorder list</div>
+
+  <!-- Script Link -->
+  <script src="js/main.js"></script>
+</body>
+
 </html>
