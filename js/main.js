@@ -190,7 +190,7 @@ function setDarkTheme() {
   form.style.backgroundColor = 'hsl(235, 24%, 19%)';
   todoInput.style.backgroundColor = 'hsl(235, 24%, 19%)';
   addBtn.style.color = '#fff';
-  toggleBtn.src = './img/icon-sun.svg';
+  toggleBtn.src = '/img/icon-sun.svg';
   toggleBtn.alt = 'light';
   bodyElement.style.backgroundColor = 'hsl(235, 21%, 11%)';
   listTask.style.backgroundColor = 'hsl(235, 24%, 19%)';
@@ -202,7 +202,7 @@ function setDarkTheme() {
   form.style.backgroundColor = '#fff';
   todoInput.style.backgroundColor = '#fff';
   addBtn.style.color = 'hsl(235, 24%, 19%)';
-  toggleBtn.src = './img/icon-moon.svg';
+  toggleBtn.src = '/img/icon-moon.svg';
   toggleBtn.alt = 'moon';
   bodyElement.style.backgroundColor = '#fff';
   listTask.style.backgroundColor = '#fff';
